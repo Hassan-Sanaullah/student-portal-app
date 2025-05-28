@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SS CASE IT - Student Portal App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #4e3963 40%, #121212 100%);
+        }
+
+        .app-screen {
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            border-radius: 30px;
+            transform: perspective(1000px) rotateY(-10deg);
+        }
+
+        .download-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+    </style>
+</head>
+
+<body class="font-sans antialiased text-white">
+    <!-- Navigation -->
+    <nav class="shadow-lg sticky top-0 z-50" style="background-color: #1e1e1e">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <i class="fas fa-graduation-cap text-2xl mr-2" style="color: #bb86fc"></i>
+                        <span class="font-bold text-sm md:text-xl" style="color: #bb86fc">
+                            SS CASE IT -<br class="block md:hidden" /> Student Portal App
+                          </span>
+                          
+                    </div>
+                </div>
+                <div class="hidden md:ml-6 md:flex md:items-center space-x-8">
+                    <a href="#features"
+                        class="text-white hover:text-purple-400 px-3 py-2 text-sm font-medium">Features</a>
+                    <a href="#download"
+                        class="text-white hover:text-purple-400 px-3 py-2 text-sm font-medium">Download</a>
+                    <a href="#faq" class="text-white hover:text-purple-400 px-3 py-2 text-sm font-medium">FAQ</a>
+                </div>
+                <div class="flex items-center">
+                    <a href="#download" style="
+                background-color: #bb86fc;
+                transition: background-color 0.3s;
+              " onmouseover="this.style.backgroundColor='#4b00bb'" onmouseout="this.style.backgroundColor='#bb86fc'"
+                        class="text-white px-4 py-2 rounded-md text-sm font-medium">
+                        Download Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-14">
+
+            <div class="md:flex items-center justify-between">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+                        Simplify Your University Life with One App
+                    </h1>
+                    <p class="text-xl mb-8 text-blue-100">
+                        Access your grades, course details, schedule, and campus services
+                        - all from your mobile device.
+                    </p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="#download"
+                            class="download-btn px-6 py-3 rounded-lg font-semibold text-lg flex items-center justify-center transition duration-300 text-white"
+                            style="background-color: #bb86fc">
+                            <i class="fas fa-download mr-2 text-xl"></i> Download for
+                            Android
+                        </a>
+
+                        <!-- <a href="#download"
+                            class="download-btn bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold text-lg flex items-center justify-center transition duration-300">
+                            <i class="fas fa-download mr-2 text-xl"></i> Download for Mac
+                        </a> -->
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <img src="images\screenshot1.png" alt="App Screenshot" 
+     class="w-64 md:w-96 floating" />
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20" style="background-color: #1e1e1e">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-white mb-4">
+                    Everything You Need for University Life
+                </h2>
+                <p class="text-xl text-white max-w-3xl mx-auto">
+                    Student portal app brings all your university tools together in one
+                    convenient place.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="feature-card p-8 rounded-xl shadow-md transition duration-300"
+                    style="background-color: #2c2c2c">
+                    <div class="w-14 h-14 rounded-full flex items-center justify-center mb-6"
+                        style="background-color: #d9bfff">
+                        <i class="fas fa-book text-2xl" style="color: #bb86fc"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">
+                        Semester Grade & GPA Overview
+                    </h3>
+                    <p class="text-white">
+                        View your grades and GPA for each semester in a clear,
+                        easy-to-read format. Track your academic performance over time to
+                        stay on top of your progress.
+                    </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="feature-card p-8 rounded-xl shadow-md transition duration-300"
+                    style="background-color: #2c2c2c">
+                    <div class="w-14 h-14 rounded-full flex items-center justify-center mb-6"
+                        style="background-color: #d9bfff">
+                        <i class="fas fa-calendar-alt text-2xl" style="color: #bb86fc"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Attendance Tracker</h3>
+                    <p class="text-white">
+                        Keep track of your attendance record for every course. See your
+                        attendance percentage and any absences in one place to ensure you
+                        meet the requirements.
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="feature-card p-8 rounded-xl shadow-md transition duration-300"
+                    style="background-color: #2c2c2c">
+                    <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-6"
+                        style="background-color: #d9bfff">
+                        <i class="fas fa-chart-line text-2xl" style="color: #bb86fc"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Course Results</h3>
+                    <p class="text-white">
+                        Check detailed results for each course, including your grades on
+                        assignments, tests, and final exams, all organized by semester.
+                    </p>
+                </div>
+
+                <!-- 
+                <div class="feature-card bg-white p-8 rounded-xl shadow-md transition duration-300">
+                    <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-comments text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Campus Communication</h3>
+                    <p class="text-gray-600">
+                        Connect with professors and classmates through integrated
+                        messaging and discussion boards.
+                    </p>
+                </div>
+
+                
+                <div class="feature-card bg-white p-8 rounded-xl shadow-md transition duration-300">
+                    <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-map-marked-alt text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Campus Navigation</h3>
+                    <p class="text-gray-600">
+                        Find your way around campus with interactive maps and real-time
+                        directions to buildings and events.
+                    </p>
+                </div>
+
+                
+                <div class="feature-card bg-white p-8 rounded-xl shadow-md transition duration-300">
+                    <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-id-card text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Digital Student ID</h3>
+                    <p class="text-gray-600">
+                        Use your phone as your student ID for building access, library
+                        checkouts, and campus services.
+                    </p>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Download CTA Section -->
+    <section id="download" class="gradient-bg text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex items-center justify-between">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                        Get Student Portal App Now
+                    </h2>
+                    <p class="text-xl mb-8 text-blue-100">
+                        Download the latest version of student portal app for your device.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-white bg-opacity-10 p-4 rounded-lg">
+                            <h3 class="font-semibold mb-2">Android Version</h3>
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <p class="text-sm text-blue-200">Version 1.0.0</p>
+                                    <p class="text-xs text-blue-300">
+                                        Requires Android version 7.0 or later
+                                    </p>
+                                </div>
+                                <a href="https://us-central1-ss-case-it-student-portal-app.cloudfunctions.net/downloadApp"
+                                    class="download-btn px-4 py-2 rounded-md font-medium text-sm flex items-center transition duration-300 text-white"
+                                    style="background-color: #bb86fc">
+                                    <i class="fas fa-download mr-2"></i> Download
+                                </a>
+                            </div>
+                        </div>
+                        <!-- <div class="bg-white bg-opacity-10 p-4 rounded-lg">
+                            <h3 class="font-semibold mb-2">Apple Version</h3>
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <p class="text-sm text-blue-200">Version 2.4.1</p>
+                                    <p class="text-xs text-blue-300">
+                                        Requires Apple or later
+                                    </p>
+                                </div>
+                                <a href="#"
+                                    class="download-btn bg-white text-blue-600 px-4 py-2 rounded-md font-medium text-sm flex items-center transition duration-300">
+                                    <i class="fas fa-download mr-2"></i> Download
+                                </a>
+                            </div>
+                        </div> 
+                    </div>
+                    <!-- <div class="mt-6">
+                        <h3 class="font-semibold mb-2">Other Downloads</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <a href="#"
+                                class="text-blue-200 hover:text-white text-sm border border-blue-300 px-3 py-1 rounded-full">Linux
+                                Version</a>
+                            <a href="#"
+                                class="text-blue-200 hover:text-white text-sm border border-blue-300 px-3 py-1 rounded-full">Mobile
+                                APK</a>
+                            <a href="#"
+                                class="text-blue-200 hover:text-white text-sm border border-blue-300 px-3 py-1 rounded-full">Release
+                                Notes</a>
+                        </div>
+                    </div> 
+                </div>
+                <!-- <div class="md:w-1/2 flex justify-center">
+                    <div class="relative">
+                        <img src="screenshot2.png" alt="App Screenshot"
+                            class="app-screen h-64 md:h-80 floating" />
+                        <div class="absolute -bottom-6 -left-6 bg-white p-3 rounded-lg shadow-lg">
+                            <div class="flex items-center">
+                                <div class="bg-blue-100 p-2 rounded-full mr-2">
+                                    <i class="fas fa-qrcode text-blue-600"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-gray-500">Scan to download</p>
+                                    <p class="text-sm font-medium">Student Portal App</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20" style="background-color: #1e1e1e">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-white mb-4">
+                    Frequently Asked Questions
+                </h2>
+                <p class="text-xl text-white max-w-3xl mx-auto">
+                    Find answers to common questions about Student Portal App.
+                </p>
+            </div>
+
+            <div class="max-w-3xl mx-auto">
+                <!-- FAQ Item 1 -->
+                <div class="mb-6 p-6 rounded-xl shadow-sm" style="background-color: #2c2c2c">
+                    <button class="flex justify-between items-center w-full text-left" onclick="toggleFAQ(1)">
+                        <h3 class="text-lg font-medium text-white">
+                            Is this an official app?
+                        </h3>
+                        <i class="fas fa-chevron-down text-blue-600 transition-transform duration-300"
+                            id="faq-icon-1"></i>
+                    </button>
+                    <div class="mt-4 text-white hidden" id="faq-content-1">
+                        <p>
+                            No, this app is not an official university application and is
+                            not approved or maintained by the university. It is an
+                            independent student project designed to help you easily view
+                            your grades, GPA, attendance, and course results in one place.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="mb-6 p-6 rounded-xl shadow-sm" style="background-color: #2c2c2c">
+                    <button class="flex justify-between items-center w-full text-left" onclick="toggleFAQ(2)">
+                        <h3 class="text-lg font-medium text-white">
+                            Does this app show all the information available on the official
+                            student portal?
+                        </h3>
+                        <i class="fas fa-chevron-down text-blue-600 transition-transform duration-300"
+                            id="faq-icon-2"></i>
+                    </button>
+                    <div class="mt-4 text-white hidden" id="faq-content-2">
+                        <p>
+                            No, this app only displays key academic information such as
+                            attendance, grades, and course results. Other details available
+                            on the official portal, like financial information, course
+                            registration, or personal data, are not included in this app.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="mb-6 p-6 rounded-xl shadow-sm" style="background-color: #2c2c2c">
+                    <button class="flex justify-between items-center w-full text-left" onclick="toggleFAQ(3)">
+                        <h3 class="text-lg font-medium text-white">
+                            What should I do if my grades or attendance don’t match what’s
+                            on the official portal?
+                        </h3>
+                        <i class="fas fa-chevron-down text-blue-600 transition-transform duration-300"
+                            id="faq-icon-3"></i>
+                    </button>
+                    <div class="mt-4 text-white hidden" id="faq-content-3">
+                        <p>
+                            If you notice any discrepancies, please verify directly on your
+                            university’s official student portal and contact your
+                            university’s academic office for corrections. This app only
+                            displays the data retrieved from the official system.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="mb-6 p-6 rounded-xl shadow-sm" style="background-color: #2c2c2c">
+                    <button class="flex justify-between items-center w-full text-left" onclick="toggleFAQ(4)">
+                        <h3 class="text-lg font-medium text-white">
+                            Why is the app sometimes slow when loading or refreshing data?
+                        </h3>
+                        <i class="fas fa-chevron-down text-blue-600 transition-transform duration-300"
+                            id="faq-icon-4"></i>
+                    </button>
+                    <div class="mt-4 text-white hidden" id="faq-content-4">
+                        <p>
+                            The app fetches your information directly from the official
+                            university portal. Loading speed depends on how quickly the
+                            official portal responds and the quality of your internet
+                            connection. If the portal is experiencing high traffic or
+                            maintenance, it may take longer to retrieve your data.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-white py-12" style="background-color: #2c2c2c">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Student Portal App</h3>
+                    <p class="text-white">
+                        Supporting students by simplifying access to their academic
+                        information.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li>
+                            <a href="#" class="text-white hover:text-white transition">Home</a>
+                        </li>
+                        <li>
+                            <a href="#features" class="text-white hover:text-white transition">Features</a>
+                        </li>
+                        <li>
+                            <a href="#download" class="text-white hover:text-white transition">Download</a>
+                        </li>
+                        <li>
+                            <a href="#faq" class="text-white hover:text-white transition">FAQ</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- <div>
+                    <h3 class="text-lg font-semibold mb-4">Download</h3>
+                    <div class="space-y-3">
+                        <a href="#download" class="flex items-center text-white hover:text-white transition">
+                            <i class="fas fa-download mr-2"></i> Android
+                        </a>
+                    </div>
+                </div> -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center text-white">
+                            <i class="fas fa-envelope mr-2"></i> hassansanaullah10@gmail.com
+                        </li>
+                        <!-- <li class="flex items-center text-gray-400">
+                            <i class="fas fa-phone mr-2"></i> (555) 123-4567
+                        </li>
+                        <li class="flex items-center text-gray-400">
+                            <i class="fas fa-map-marker-alt mr-2"></i> 123 University Ave,
+                            Campus Town
+                        </li> -->
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-white mb-4 md:mb-0"></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Toggle FAQ items
+        function toggleFAQ(id) {
+            const content = document.getElementById(`faq-content-${id}`);
+            const icon = document.getElementById(`faq-icon-${id}`);
+
+            if (content.classList.contains("hidden")) {
+                content.classList.remove("hidden");
+                icon.classList.add("rotate-180");
+            } else {
+                content.classList.add("hidden");
+                icon.classList.remove("rotate-180");
+            }
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+            anchor.addEventListener("click", function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute("href")).scrollIntoView({
+                    behavior: "smooth",
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
