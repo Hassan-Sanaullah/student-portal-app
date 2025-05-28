@@ -248,16 +248,14 @@
                                         Requires Android version 7.0 or later
                                     </p>
                                     <!-- Added release date -->
-                <p class="text-xs text-gray-400">Released on: 20 May, 2025</p>
+                                    <p class="text-xs text-gray-400">Released on: 20 May, 2025</p>
                                 </div>
-                                <a href="https://www.dropbox.com/scl/fi/tehsikbt3wb5m8o9dj6k9/student_portal_app_v1.0.0.apk?rlkey=0y7z2ozuhl6gbvc0gx2mhtl16&st=4sptkam5&dl=1"
-                                    onclick="gtag('event', 'click', {
-     'event_category': 'APK',
-     'event_label': 'Download My App'
-   });" class="download-btn px-4 py-2 rounded-md font-medium text-sm flex items-center transition duration-300 text-white"
+                                <a href="#" id="downloadBtn"
+                                    class="download-btn px-4 py-2 rounded-md font-medium text-sm flex items-center transition duration-300 text-white"
                                     style="background-color: #bb86fc">
                                     <i class="fas fa-download mr-2"></i> Download
                                 </a>
+
                             </div>
                             <!-- Credit Text below the button -->
                             <p class="text-white text-sm text-center mt-2">
@@ -496,6 +494,26 @@
             });
         });
     </script>
+
+    <script>
+        const downloadUrl = "https://www.dropbox.com/scl/fi/tehsikbt3wb5m8o9dj6k9/student_portal_app_v1.0.0.apk?rlkey=0y7z2ozuhl6gbvc0gx2mhtl16&st=4sptkam5&dl=1";
+
+        const btn = document.getElementById('downloadBtn');
+        btn?.addEventListener('click', (e) => {
+            e.preventDefault(); // stop immediate navigation
+
+            gtag('event', 'click', {
+                event_category: 'APK',
+                event_label: 'Download My App'
+            });
+
+            // Give GA time to send the event, then redirect
+            setTimeout(() => {
+                window.location.href = downloadUrl;
+            }, 300); // 300ms delay is usually enough
+        });
+    </script>
+
 </body>
 
 </html>
